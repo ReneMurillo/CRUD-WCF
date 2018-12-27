@@ -1,0 +1,97 @@
+﻿@model IEnumerable<WSApplicationWeb.Models.PersonaView>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="row">
+    @using (Html.BeginForm("Index", "Home"))
+    {
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Consumo de Servicio Web
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="Nombre" id="nombre" class="form-control" placeholder="Ingrese el nombre" />
+                </div>
+
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="Apellido" id="apellido" class="form-control" placeholder="Ingrese el apellido" />
+                </div>
+
+                <div class="form-group">
+                    <label for="edad">Edad</label>
+                    <input type="number" name="Edad" id="edad" class="form-control" placeholder="Ingrese la edad" />
+                </div>
+
+                <div class="form-group">
+                    <label for="identificacion">Identificación</label>
+                    <input type="text" name="DocumentoIdentificacion" id="identificacion" class="form-control" placeholder="Ingrese el el DUI" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Registrar" class="btn btn-primary" />
+                </div>
+
+                <div class="jumbotron">
+                    <font color="green">
+                        @ViewBag.Insertado
+                    </font>
+
+                    <font color="red">
+                        @ViewBag.Error
+                    </font>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <tr>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Apellido
+                </th>
+                <th>
+                    Edad
+                </th>
+                <th>
+                    DUI
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => item.Nombre)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(model => item.Apellido)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(model => item.Edad)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(model => item.DocumentoIdentificacion)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Ver", "VerPersona", new { id = item.Id}, new { @class = "btn btn-success"})
+                    @Html.ActionLink("Editar", "EditarPersona", new { id = item.Id}, new { @class = "btn btn-warning"})
+                    @Html.ActionLink("Eliminar", "EliminarPersona", new { id = item.Id}, new { @class = "btn btn-danger"})
+                </td>
+            </tr>
+            }
+
+        </table>
+    </div>
+</div>

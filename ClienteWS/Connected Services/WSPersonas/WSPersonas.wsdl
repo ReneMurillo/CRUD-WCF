@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WSPersonas" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50511/WSPersonas.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50511/WSPersonas.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:50511/WSPersonas.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MiWS" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWSPersonas_NuevaPersona_InputMessage">
+    <wsdl:part name="parameters" element="tns:NuevaPersona" />
+  </wsdl:message>
+  <wsdl:message name="IWSPersonas_NuevaPersona_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NuevaPersonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSPersonas_EditarPersona_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditarPersona" />
+  </wsdl:message>
+  <wsdl:message name="IWSPersonas_EditarPersona_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditarPersonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSPersonas_EliminarPersona_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarPersona" />
+  </wsdl:message>
+  <wsdl:message name="IWSPersonas_EliminarPersona_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarPersonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSPersonas_buscarPersona_InputMessage">
+    <wsdl:part name="parameters" element="tns:buscarPersona" />
+  </wsdl:message>
+  <wsdl:message name="IWSPersonas_buscarPersona_OutputMessage">
+    <wsdl:part name="parameters" element="tns:buscarPersonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSPersonas_listarPersonas_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarPersonas" />
+  </wsdl:message>
+  <wsdl:message name="IWSPersonas_listarPersonas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarPersonasResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWSPersonas">
+    <wsdl:operation name="NuevaPersona">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSPersonas/NuevaPersona" message="tns:IWSPersonas_NuevaPersona_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSPersonas/NuevaPersonaResponse" message="tns:IWSPersonas_NuevaPersona_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditarPersona">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSPersonas/EditarPersona" message="tns:IWSPersonas_EditarPersona_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSPersonas/EditarPersonaResponse" message="tns:IWSPersonas_EditarPersona_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarPersona">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSPersonas/EliminarPersona" message="tns:IWSPersonas_EliminarPersona_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSPersonas/EliminarPersonaResponse" message="tns:IWSPersonas_EliminarPersona_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="buscarPersona">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSPersonas/buscarPersona" message="tns:IWSPersonas_buscarPersona_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSPersonas/buscarPersonaResponse" message="tns:IWSPersonas_buscarPersona_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarPersonas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSPersonas/listarPersonas" message="tns:IWSPersonas_listarPersonas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSPersonas/listarPersonasResponse" message="tns:IWSPersonas_listarPersonas_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWSPersonas" type="tns:IWSPersonas">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NuevaPersona">
+      <soap:operation soapAction="http://tempuri.org/IWSPersonas/NuevaPersona" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditarPersona">
+      <soap:operation soapAction="http://tempuri.org/IWSPersonas/EditarPersona" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarPersona">
+      <soap:operation soapAction="http://tempuri.org/IWSPersonas/EliminarPersona" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscarPersona">
+      <soap:operation soapAction="http://tempuri.org/IWSPersonas/buscarPersona" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarPersonas">
+      <soap:operation soapAction="http://tempuri.org/IWSPersonas/listarPersonas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSPersonas">
+    <wsdl:port name="BasicHttpBinding_IWSPersonas" binding="tns:BasicHttpBinding_IWSPersonas">
+      <soap:address location="http://localhost:50511/WSPersonas.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

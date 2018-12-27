@@ -1,0 +1,14 @@
+F:\MVC-3\WSEjemplo\EFData\bin\Debug\EFData.dll.config
+F:\MVC-3\WSEjemplo\EFData\bin\Debug\EFData.dll
+F:\MVC-3\WSEjemplo\EFData\bin\Debug\EFData.pdb
+F:\MVC-3\WSEjemplo\EFData\bin\Debug\EntityFramework.dll
+F:\MVC-3\WSEjemplo\EFData\bin\Debug\EntityFramework.SqlServer.dll
+F:\MVC-3\WSEjemplo\EFData\bin\Debug\EntityFramework.xml
+F:\MVC-3\WSEjemplo\EFData\bin\Debug\EntityFramework.SqlServer.xml
+F:\MVC-3\WSEjemplo\EFData\obj\Debug\EFData.csprojAssemblyReference.cache
+F:\MVC-3\WSEjemplo\EFData\obj\Debug\EFData.csproj.CoreCompileInputs.cache
+F:\MVC-3\WSEjemplo\EFData\obj\Debug\EFData.csproj.CopyComplete
+F:\MVC-3\WSEjemplo\EFData\obj\Debug\EFData.dll
+F:\MVC-3\WSEjemplo\EFData\obj\Debug\EFData.pdb
+F:\MVC-3\WSEjemplo\EFData\obj\Debug\EFData.Migrations.Initial.resources
+F:\MVC-3\WSEjemplo\EFData\obj\Debug\EFData.csproj.GenerateResource.cache

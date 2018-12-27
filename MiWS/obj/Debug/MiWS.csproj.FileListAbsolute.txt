@@ -1,0 +1,13 @@
+G:\Proyectos\WSEjemplo\MiWS\bin\MiWS.dll.config
+G:\Proyectos\WSEjemplo\MiWS\bin\MiWS.dll
+G:\Proyectos\WSEjemplo\MiWS\bin\MiWS.pdb
+G:\Proyectos\WSEjemplo\MiWS\obj\Debug\MiWS.csproj.CoreCompileInputs.cache
+G:\Proyectos\WSEjemplo\MiWS\obj\Debug\MiWS.dll
+G:\Proyectos\WSEjemplo\MiWS\obj\Debug\MiWS.pdb
+F:\MVC-3\WSEjemplo\MiWS\bin\MiWS.dll.config
+F:\MVC-3\WSEjemplo\MiWS\bin\MiWS.dll
+F:\MVC-3\WSEjemplo\MiWS\bin\MiWS.pdb
+F:\MVC-3\WSEjemplo\MiWS\obj\Debug\MiWS.csprojAssemblyReference.cache
+F:\MVC-3\WSEjemplo\MiWS\obj\Debug\MiWS.csproj.CoreCompileInputs.cache
+F:\MVC-3\WSEjemplo\MiWS\obj\Debug\MiWS.dll
+F:\MVC-3\WSEjemplo\MiWS\obj\Debug\MiWS.pdb
